@@ -1,0 +1,421 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@font-face {
+  font-family: "light";
+  src: url("../../Font/light.otf") format("opentype"); /* Specify 'opentype' format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.aboutcontainer {
+  margin: 0%;
+  padding: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.minicontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.abouttitle {
+  font-size: clamp(4rem, 2.3636rem + 2.9091vw, 6rem);
+  text-align: center;
+  font-family: light;
+  font-weight: 50;
+  padding-block: 3rem;
+  margin: 0%;
+  background-image: -o-linear-gradient(346deg, #fff -14%, #8b8b8b 131%);
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2rem 1fr;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-gap: 2rem; /* Gap between grid items */
+  width: 95%;
+  padding: 0%;
+  margin: 0%;
+}
+
+.stackcontainer {
+  -ms-grid-column-span: 2;
+  grid-column: span 2; /* Take full width of the grid */
+  background-color: #1e1e1e;
+  padding: clamp(1.5rem, 0.6rem + 1.6vw, 2rem);
+}
+
+.stacktitle {
+  font-size: clamp(2rem, 1.5909rem + 0.7273vw, 2.5rem);
+  text-align: left;
+  color: white;
+}
+
+.stack {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
+  grid-template-columns: repeat(6, 1fr); /* Three icons in one row */
+  gap: 1rem;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.socialcard,
+.intoduction {
+  background-color: #1e1e1e;
+  padding: clamp(1.5rem, 0.6rem + 1.6vw, 2rem);
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: "<percentage>";
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
+}
+:root {
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: rgb(255, 255, 255);
+  --c2: rgba(168, 239, 255, 0.1);
+}
+.box {
+  border: 0.1rem solid;
+  -o-border-image: conic-gradient(
+      from var(--angle),
+      var(--c2),
+      var(--c1) 0.1turn,
+      var(--c1) 0.15turn,
+      var(--c2) 0.25turn
+    )
+    30;
+  border-image: conic-gradient(
+      from var(--angle),
+      var(--c2),
+      var(--c1) 0.1turn,
+      var(--c1) 0.15turn,
+      var(--c2) 0.25turn
+    )
+    30;
+  -webkit-animation: borderRotate var(--d) linear infinite forwards;
+  animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.box:nth-child(2) {
+  -o-border-image: -o-radial-gradient(
+      var(--gradX) var(--gradY),
+      ellipse,
+      var(--c1),
+      var(--c1) 10%,
+      var(--c2) 40%
+    )
+    30;
+  border-image: radial-gradient(
+      ellipse at var(--gradX) var(--gradY),
+      var(--c1),
+      var(--c1) 10%,
+      var(--c2) 40%
+    )
+    30;
+  -webkit-animation: borderRadial var(--d) linear infinite forwards;
+  animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@-webkit-keyframes borderRotate {
+  100% {
+    --angle: 420deg;
+  }
+}
+
+@keyframes borderRotate {
+  100% {
+    --angle: 420deg;
+  }
+}
+
+@-webkit-keyframes borderRadial {
+  20% {
+    --gradX: 100%;
+    --gradY: 50%;
+  }
+  40% {
+    --gradX: 100%;
+    --gradY: 100%;
+  }
+  60% {
+    --gradX: 50%;
+    --gradY: 100%;
+  }
+  80% {
+    --gradX: 0%;
+    --gradY: 50%;
+  }
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+}
+
+@keyframes borderRadial {
+  20% {
+    --gradX: 100%;
+    --gradY: 50%;
+  }
+  40% {
+    --gradX: 100%;
+    --gradY: 100%;
+  }
+  60% {
+    --gradX: 50%;
+    --gradY: 100%;
+  }
+  80% {
+    --gradX: 0%;
+    --gradY: 50%;
+  }
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+}
+
+.emailcard {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: clamp(1rem, 0.1818rem + 1.4545vw, 2rem);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.followtitle {
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.social a {
+  margin-right: 1rem; /* Add some space between social icons */
+}
+
+.profile {
+  height: clamp(5rem, 4.1818rem + 1.4545vw, 6rem);
+}
+
+.mediscription {
+  font-size: clamp(1.4rem, 0.5rem + 1.6vw, 2.5rem);
+  text-align: left;
+  line-height: 1.5;
+  background-image: -o-linear-gradient(346deg, #fff -14%, #8b8b8b 131%);
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200%;
+}
+
+.emailtitle {
+  font-size: clamp(1rem, 0.1818rem + 1.4545vw, 2rem);
+  background-image: -o-linear-gradient(346deg, #fff -14%, #8b8b8b 131%);
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.socialicon {
+  width: clamp(4rem, -3.2rem + 12.8vw, 8rem);
+}
+
+.socialicon2 {
+  width: clamp(3.7rem, 1.8182rem + 3.3455vw, 6rem);
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr; /* Change to a single column layout */
+  }
+
+  .stackcontainer {
+    -ms-grid-column-span: 1;
+    grid-column: span 1; /* Change to span only one column */
+  }
+
+  .intoduction {
+    -ms-grid-column-span: 1;
+    grid-column: span 1; /* Change to span only one column */
+  }
+
+  .emailtitle {
+    font-size: clamp(1.5rem, -0.5067rem + 5.3512vw, 2.5rem);
+  }
+
+  .mediscription {
+    font-size: clamp(1.5rem, 0.4967rem + 2.6756vw, 2rem);
+  }
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr; /* Change to a single column layout */
+  }
+
+  .stackcontainer {
+    -ms-grid-column-span: 1;
+    grid-column: span 1; /* Change to span only one column */
+  }
+
+  .intoduction {
+    -ms-grid-column-span: 1;
+    grid-column: span 1; /* Change to span only one column */
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr; /* Change to a single column layout */
+  }
+
+  .minicontainer {
+    width: 95%;
+    padding: 0%;
+    margin: 0%;
+  }
+  .stackcontainer {
+    -ms-grid-column-span: 1;
+    grid-column: span 1; /* Change to span only one column */
+  }
+
+  .intoduction {
+    -ms-grid-column-span: 1;
+    grid-column: span 1; /* Change to span only one column */
+  }
+
+  .emailtitle {
+    font-size: clamp(1rem, 0.2977rem + 3.7458vw, 1.7rem);
+  }
+
+  .mediscription {
+    font-size: clamp(1rem, 0.4983rem + 2.6756vw, 1.5rem);
+  }
+  .stacktitle {
+    font-size: clamp(1.5rem, 0.9983rem + 2.6756vw, 2rem);
+    line-height: 0.5;
+  }
+
+  .socialicon {
+    width: clamp(3rem, 1.495rem + 8.0268vw, 4.5rem);
+  }
+
+  .socialicon2 {
+    width: clamp(3rem, 1.495rem + 8.0268vw, 4.5rem);
+  }
+
+  .profile {
+    height: clamp(2rem, 0.9967rem + 5.3512vw, 3rem);
+  }
+
+  .socialcard,
+  .emailcard,
+  .intoduction {
+    padding: 0%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intoduction,
+  .socialcard {
+    padding: 1rem;
+  }
+
+  .stack {
+    -ms-grid-columns: 1fr 2.5rem 1fr 2.5rem 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .aboutcontainer {
+    width: 100%;
+  }
+
+  .abouttitle {
+    font-size: clamp(2.2rem, 1.3973rem + 4.2809vw, 3rem);
+    margin: 0%;
+  }
+}

@@ -1,0 +1,190 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@font-face {
+  font-family: "Medium";
+  src: url("../../Font/Medium.otf") format("opentype"); /* Specify 'opentype' format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "light";
+  src: url("../../Font/light.otf") format("opentype"); /* Specify 'opentype' format */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thin";
+  src: url("../../Font/Thin.otf") format("opentype"); /* Specify 'opentype' format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.card {
+  width: clamp(23rem, 1.4rem + 38.4vw, 35rem);
+  padding: clamp(1rem, -0.8rem + 3.2vw, 2rem);
+  -webkit-box-shadow: 4px 8px 21px 0 rgba(0, 0, 0, 0.02),
+    17px 34px 38px 0 rgba(0, 0, 0, 0.02), 38px 76px 51px 0 rgba(0, 0, 0, 0.01),
+    67px 134px 60px 0 rgba(0, 0, 0, 0), 105px 210px 66px 0 rgba(0, 0, 0, 0);
+  box-shadow: 4px 8px 21px 0 rgba(0, 0, 0, 0.02),
+    17px 34px 38px 0 rgba(0, 0, 0, 0.02), 38px 76px 51px 0 rgba(0, 0, 0, 0.01),
+    67px 134px 60px 0 rgba(0, 0, 0, 0), 105px 210px 66px 0 rgba(0, 0, 0, 0);
+  border: solid 0.5px #d8d8d8;
+  background-color: #000000;
+}
+.thumbnail {
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+}
+.thumbnsilcontsiner {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: clamp(25rem, -2rem + 48vw, 40rem);
+  background-color: #005eff;
+
+  background-image: radial-gradient(
+      at 29% 74%,
+      rgb(0, 0, 0) 0px,
+      transparent 100%
+    ),
+    radial-gradient(at 31% 83%, rgb(40, 40, 40) 0px, transparent 50%),
+    radial-gradient(at 77% 7%, rgb(0, 0, 0) 0px, transparent 50%),
+    radial-gradient(at 19% 18%, hsla(261, 77%, 0%, 1) 0px, transparent 50%),
+    radial-gradient(at 70% 36%, hsla(10, 87%, 0%, 1) 0px, transparent 50%),
+    radial-gradient(at 5% 0%, rgb(0, 0, 0) 0px, transparent 50%),
+    radial-gradient(at 59% 57%, rgb(0, 0, 0) 0px, transparent 50%);
+  background-size: 150% 150%;
+  animation: my_animation 7s ease infinite;
+}
+
+@-webkit-keyframes my_animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes my_animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.cardinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0%;
+}
+
+.title {
+  font-size: clamp(2.5rem, -0.2rem + 4.8vw, 4rem);
+  margin: 0%;
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.discription {
+  font-size: clamp(1.3rem, 0.04rem + 2.24vw, 2rem);
+  margin: 0%;
+  font-family: Thin;
+  line-height: 1.5;
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.chips {
+  padding: clamp(0.2rem, -0.34rem + 0.96vw, 0.5rem)
+    clamp(0.5rem, -0.4rem + 1.6vw, 1rem);
+  background-color: #fff2f3;
+}
+
+.chips p {
+  font-size: clamp(0.9rem, 0.72rem + 0.32vw, 1rem);
+}
+
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  .thumbnsilcontsiner {
+    height: 23.5rem;
+  }
+  .card {
+    width: 21.5rem;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+  .card {
+    width: clamp(15rem, 4.9666rem + 53.5117vw, 25rem);
+    padding: clamp(0.5rem, -0.0017rem + 2.6756vw, 1rem);
+  }
+
+  .thumbnsilcontsiner {
+    height: 25rem;
+    height: clamp(17rem, 8.9732rem + 42.8094vw, 25rem);
+  }
+
+  .chips p {
+    font-size: clamp(0.5rem, -0.0017rem + 2.6756vw, 1rem);
+  }
+
+  .title {
+    font-size: clamp(1.7rem, 0.8973rem + 4.2809vw, 2.5rem);
+  }
+
+  .discription {
+    font-size: clamp(1rem, 0.2977rem + 3.7458vw, 1.7rem);
+  }
+}

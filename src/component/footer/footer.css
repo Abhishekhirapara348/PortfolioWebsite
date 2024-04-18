@@ -1,0 +1,228 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@font-face {
+  font-family: "light";
+  src: url("../../Font/light.otf") format("opentype"); /* Specify 'opentype' format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Medium";
+  src: url("../../Font/Medium.otf") format("opentype"); /* Specify 'opentype' format */
+  font-weight: normal;
+  font-style: normal;
+}
+.footercontainer {
+  background-color: black;
+  padding-top: clamp(5rem, -3.1818rem + 14.5455vw, 15rem);
+  width: 100%;
+}
+.lets {
+  font-family: "Medium";
+
+  text-align: center;
+  font-size: clamp(7.5rem, -0.75rem + 14.6667vw, 13rem);
+  line-height: 1;
+  background-image: -o-linear-gradient(346deg, #fff -14%, #8b8b8b 131%);
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0%;
+}
+
+.bookcallline {
+  width: 75%;
+  text-align: center;
+  font-size: clamp(2rem, 1.25rem + 1.3333vw, 2.5rem);
+  line-height: 1.5;
+  background-image: -o-linear-gradient(346deg, #fff -14%, #8b8b8b 131%);
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0%;
+}
+
+.alllinecontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-block: 5rem;
+}
+
+.callbtn {
+  background-color: #2a84ff;
+  color: white;
+  font-size: clamp(1.5rem, 0.75rem + 1.3333vw, 2rem);
+  padding: clamp(0.9rem, 0.6rem + 0.5333vw, 1.1rem)
+    clamp(1.9rem, 1rem + 1.6vw, 2.5rem);
+  border: none;
+  border-radius: 2.5rem;
+  cursor: pointer;
+}
+.emailbtn {
+  background: none;
+  color: white;
+  font-size: clamp(1.5rem, 0.75rem + 1.3333vw, 2rem);
+  padding: 0.9rem 1.5rem;
+  border: 0.1rem solid white;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.btncontainer2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1.5rem;
+}
+
+.copyright {
+  border-top: 0.1rem solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-block: 2rem;
+}
+
+.copytext {
+  font-size: 1rem;
+  line-height: 1.5;
+  background-image: -o-linear-gradient(346deg, #fff -14%, #8b8b8b 131%);
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0%;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  .lets {
+    font-size: clamp(5rem, 0.9866rem + 10.7023vw, 7rem);
+  }
+
+  .bookcallline {
+    font-size: clamp(1rem, -0.204rem + 3.2107vw, 1.6rem);
+  }
+
+  .copytext {
+    font-size: clamp(0.8rem, -0.0027rem + 2.1405vw, 1.2rem);
+  }
+
+  .copyright {
+    padding-block: clamp(1rem, -1.0067rem + 5.3512vw, 2rem);
+  }
+
+  .btncontainer {
+    padding-block: 1rem;
+  }
+
+  .callbtn {
+    padding: clamp(0.7rem, 0.098rem + 1.6054vw, 1rem)
+      clamp(1.7rem, 1.098rem + 1.6054vw, 2rem);
+    font-size: clamp(1rem, -0.0033rem + 2.6756vw, 1.5rem);
+  }
+
+  .emailbtn {
+    font-size: clamp(1rem, -0.0033rem + 2.6756vw, 1.5rem);
+    padding: clamp(0.7rem, 0.098rem + 1.6054vw, 1rem)
+      clamp(1.3rem, 0.698rem + 1.6054vw, 1.6rem);
+  }
+
+  .alllinecontainer {
+    padding-block: 3rem;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+  .footercontainer {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .lets {
+    font-size: clamp(2.5rem, -0.51rem + 16.0535vw, 5rem);
+    text-align: left;
+    width: 99%;
+  }
+
+  .bookcallline {
+    font-size: clamp(0.9rem, 0.3983rem + 2.6756vw, 1.4rem);
+    text-align: left;
+    width: 95%;
+  }
+
+  .alllinecontainer {
+    padding: 0%;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .copytext {
+    font-size: clamp(0.5rem, -0.102rem + 3.2107vw, 1.1rem);
+    text-align: left;
+  }
+
+  .copyright {
+    padding-block: clamp(1rem, -1.0067rem + 5.3512vw, 2rem);
+  }
+
+  .btncontainer2 {
+    padding-block: 1rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .callbtn {
+    padding: clamp(0.7rem, 0.299rem + 1.6054vw, 0.9rem)
+      clamp(1rem, 0.4983rem + 2.6756vw, 1.5rem);
+    font-size: clamp(0.9rem, -0.403rem + 4.8161vw, 1.4rem);
+    border-radius: 0%;
+  }
+
+  .emailbtn {
+    padding: clamp(0.6rem, 0.299rem + 1.6054vw, 0.9rem)
+      clamp(1rem, 0.4983rem + 2.6756vw, 1.5rem);
+    font-size: clamp(0.9rem, -0.403rem + 4.8161vw, 1.4rem);
+    border-radius: 0%;
+  }
+
+  .copyright {
+    text-align: left;
+    margin: 0%;
+  }
+}

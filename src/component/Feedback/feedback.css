@@ -1,0 +1,293 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@font-face {
+  font-family: "light";
+  src: url("../../Font/light.otf") format("opentype"); /* Specify 'opentype' format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.animate {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.feedback {
+  padding-block: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.feedbacktitle {
+  font-size: clamp(4rem, 2.3636rem + 2.9091vw, 6rem);
+  font-family: light;
+  font-weight: 50;
+  padding-block: 1rem;
+  margin: 0%;
+  text-align: center;
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.feedbacktitle2 {
+  font-size: clamp(1.5rem, 1.0909rem + 0.7273vw, 2rem);
+  margin: 0%;
+  font-family: "light";
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.feedbackcontainer {
+  padding: 4rem 2rem;
+  background-color: #000;
+}
+
+.messagecontainer {
+  padding: 2rem;
+  background-color: #1e1e1e;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.messagecontainer2 {
+  padding: 2rem;
+  background-color: #1e1e1e;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: "<percentage>";
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
+}
+:root {
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: rgb(255, 0, 0);
+  --c2: rgba(168, 239, 255, 0.1);
+}
+.box2 {
+  border: 0.2rem solid;
+  border-image: conic-gradient(
+      from var(--angle),
+      var(--c2),
+      var(--c1) 0.1turn,
+      var(--c1) 0.15turn,
+      var(--c2) 0.25turn
+    )
+    30;
+  animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.box2:nth-child(2) {
+  border-image: radial-gradient(
+      ellipse at var(--gradX) var(--gradY),
+      var(--c1),
+      var(--c1) 10%,
+      var(--c2) 40%
+    )
+    30;
+  animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+  100% {
+    --angle: 420deg;
+  }
+}
+
+@keyframes borderRadial {
+  20% {
+    --gradX: 100%;
+    --gradY: 50%;
+  }
+  40% {
+    --gradX: 100%;
+    --gradY: 100%;
+  }
+  60% {
+    --gradX: 50%;
+    --gradY: 100%;
+  }
+  80% {
+    --gradX: 0%;
+    --gradY: 50%;
+  }
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+}
+
+.containertwo {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.clientmessage {
+  font-size: clamp(1.5rem, 0.24rem + 2.24vw, 2.2rem);
+  font-family: light;
+  line-height: 1.5;
+  text-align: left;
+  width: 95%;
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.clientname {
+  font-size: clamp(3rem, 1.2rem + 3.2vw, 4rem);
+  margin: 0%;
+  text-align: left;
+  line-height: 1.5;
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.clientocupation {
+  font-size: clamp(1.5rem, 0.6rem + 1.6vw, 2rem);
+  margin: 0%;
+  text-align: left;
+  line-height: 1.5;
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: light;
+}
+
+.clientocupation2 {
+  font-size: clamp(1.5rem, 0.6rem + 1.6vw, 2rem);
+  margin: 0%;
+  text-align: left;
+  line-height: 1.5;
+  background-image: linear-gradient(104deg, #fff -14%, #8b8b8b 131%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: light;
+}
+
+.quatsvg {
+  width: clamp(8rem, 0.8rem + 12.8vw, 12rem);
+}
+
+.twocardcontainer {
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+  gap: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+  .feedbackcontainer {
+    padding: 2.5rem 0.5rem;
+  }
+
+  .feedback {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .messagecontainer,
+  .messagecontainer2,
+  .feedback {
+    padding: 1rem;
+  }
+
+  .clientmessage {
+    font-size: clamp(1rem, 0.4983rem + 2.6756vw, 1.5rem);
+  }
+
+  .quatsvg {
+    width: 5rem;
+  }
+
+  .clientname {
+    font-size: clamp(2rem, 0.9967rem + 5.3512vw, 3rem);
+  }
+
+  .clientocupation,
+  .clientocupation2 {
+    font-size: clamp(1rem, 0.398rem + 3.2107vw, 1.6rem);
+  }
+
+  .feedbacktitle {
+    font-size: clamp(2.2rem, 1.3973rem + 4.2809vw, 3rem);
+    text-align: left;
+  }
+
+  .feedbacktitle2 {
+    font-size: clamp(1rem, 0.4983rem + 2.6756vw, 1.5rem);
+  }
+}
